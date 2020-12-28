@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        var pattern = /a/               // 두 개 다 같은 표현
+        var pattern = new RegExp('a');  // 두 개 다 같은 표현
+
+        console.log(pattern.test('abcdef')); // true
+        console.log(pattern.test('bcdefg')); // false
+
+        console.log(pattern.exec('abcdef')); // ["a"]
+        console.log(pattern.exec('bcdefg')); // null
+
+        console.log('abcdef'.match(pattern)); // ["a"]
+        console.log('bcdefg'.match(pattern)); // null
+
+        console.log('abcdef'.replace(pattern, 'A'));  // Abcdef
+
+        var xi = /a/;
+        console.log("Abcde".match(xi)); // null
+        var oi = /a/i;                  // i를 붙이면 대소문자 구분 X
+        console.log("Abcde".match(oi)); // ["A"];
+
+        var xg = /a/;
+        console.log("abcdea".match(xg));
+        var og = /a/g;                   // g를 붙이면 검색된 모든 결과를 리턴한다.
+        console.log("abcdea".match(og)); // a,a
+
+
+    </script>
+</body>
+
+</html>
