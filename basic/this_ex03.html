@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        var funcThis = null;
+        function Func() {
+            funcThis = this; // 전역변수 funcThis 값 사용
+        }
+        var o1 = Func(); // 함수로 Func 호출
+
+        // 함수로 호출할경우 함수는 window라는 global 객체의 메소드이기 때문에
+        // this는 window를 가리킨다.
+        if (funcThis === window) {
+            document.write('window <br />');
+        }
+
+        var o2 = new Func(); // 객체로써 Func 호출
+        if (funcThis === o2) {
+            document.write('o2 <br />');
+        }
+    </script>
+</body>
+
+</html>

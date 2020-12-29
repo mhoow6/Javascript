@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        o1 = { val1: 1, val2: 2, val3: 3 }
+        o2 = { v1: 10, v2: 50, v3: 100, v4: 25 }
+
+        // Function 객체를 상속하는 sum이라는 관점으로 볼 수 있다.
+        function sum() {
+            var _sum = 0;
+            // this는 함수를 호출한 객체에 따라 달라진다.
+            for (name in this) {
+                _sum += this[name];
+            }
+            return _sum;
+        }
+        
+        // 객체 Function의 메소드 apply의 첫번째 인자는 함수가 실행될 맥락
+        // 함수 sum을 객체 o1의 메소드로 만듬
+        alert(sum.apply(o1)) // 6
+
+        alert(sum.apply(o2)) // 185
+    </script>
+</body>
+
+</html>

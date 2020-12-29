@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        var arr = []
+        for (var i = 0; i < 5; i++) {
+            // for 반복문이 다 돌고 나서 5로 정의된 전역변수 i를 데리고 오게 됨
+            // arr[i] = function () {
+            //     return i;
+            // }
+            
+            // for문에 정의되어 있는 전역변수 값 i를 끌어다 쓰게 때문에
+            // 외부함수의 매개변수를 id로 바꿔주어
+            // 내부함수의 변수를 외부함수의 지역변수를 따르게 한다.
+            arr[i] = function (id) {
+                return function() {
+                    return id;
+                }
+            }();
+        }
+
+        for (var index in arr) {
+            console.log(arr[index]());
+        }
+    </script>
+</body>
+
+</html>
