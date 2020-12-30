@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        var str = 'coding';
+        // 원시 데이터 타입을 객체처럼 .(object access operator)를
+        // 이용해 접근할 경우 자바스크립트 내부적으로 String객체가 만들어지고
+        // prop라는 속성은 저장되고 곧 제거됨.
+        // 이처럼 원시 데이터 형을 객체처럼 다루기 위한 객체를 래퍼 객체라고 함(wrapper object)
+        str.prop = 'everybody'; 
+        console.log(str.prop);      // undefined
+    </script>
+</body>
+
+</html>

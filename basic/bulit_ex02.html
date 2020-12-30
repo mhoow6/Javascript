@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        // Object 객체는 기본적인 형태를 가지고 있는 객체
+        // 모든 javascript 객체는 object를 상속받는다.
+        Object.prototype.contain = function (neddle) {
+            for (var name in this) {
+                if (this[name] === neddle) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        var o = { 'name': 'egoing', 'city': 'seoul' }
+        console.log(o.contain('egoing'));
+        var a = ['egoing', 'leezche', 'grapittie'];
+        console.log(a.contain('leezche'));
+
+        for (var name in o) {
+            // o 객체가 가진 name과 city 속성 이외에도
+            // contain을 prototype로부터 상속받았기 때문에 포함이 되어있다.
+            // 개발자가 예상하는 객체 외에 다른 객체를 가지고 있어 
+            // 혼란을 줄 수 있으니 주의
+            console.log(name);
+        }
+
+        // hasOwnProperty는 인자로 전달된 속성의 이름이 객체의 속성인지 여부를 판단
+        // prototype으로 상속 받은 객체이면 false
+        for (var name in o) {
+            if (o.hasOwnProperty(name))
+                console.log(name);
+        }
+    </script>
+</body>
+
+</html>

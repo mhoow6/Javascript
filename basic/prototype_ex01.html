@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        function Ultra() { }
+        Ultra.prototype.ultraProp = true;
+
+        function Super() { }
+        Super.prototype = new Ultra();
+
+        function Sub() { }
+        Sub.prototype = new Super();
+
+        var o = new Sub();
+
+        // 객체 o에서 ultraProp를 찾는다.
+        // 없다면 Sub.prototype.ultraProp를 찾는다.
+        // 없다면 Super.prototype.ultraProp를 찾는다.
+        // 없다면 Ultra.prototype.ultraProp를 찾는다.
+        console.log(o.ultraProp);
+    </script>
+</body>
+
+</html>

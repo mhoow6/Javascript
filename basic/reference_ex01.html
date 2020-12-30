@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        var a = 1;
+        var b = a;
+        b = 2;
+        console.log(a); // 1
+
+        var a = { 'id': 1 }; // { 'id': 1 } 생성
+        var b = a; // { 'id': 1 } 을 참조
+        b.id = 2;
+        console.log(a.id);  // 2
+    </script>
+</body>
+
+</html>
