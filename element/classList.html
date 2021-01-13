@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li id="active" class="important current">JavaScript</li>
+    </ul>
+    <script>
+    // return DOMTokenList
+    console.log(active.classList);
+
+    // 배열처럼 접근 가능
+    console.log(active.classList[0]);
+
+    // 기존 클래스리스트에 클래스 추가
+    // important \n current \n readed
+    active.classList.add('readed');
+
+    // 제거도 가능
+    active.classList.remove('readed');
+
+    // 토글할 클래스가 이미 있을 경우 제거 없으면 추가
+    active.classList.toggle('readed');
+
+    function loop(){
+        for(var i=0; i<active.classList.length; i++){
+            // important \n current
+            console.log(i, active.classList[i]);
+        }
+    }
+    // 클래스를 추가
+    </script>
+    <input type="button" value="DOMTokenList" onclick="console.log(active.classList);" />
+    <input type="button" value="조회" onclick="loop();" />
+    <input type="button" value="추가" onclick="active.classList.add('marked');" />
+    <input type="button" value="제거" onclick="active.classList.remove('important');" />
+    <input type="button" value="토글" onclick="active.classList.toggle('current');" />
+    
+</body>
+</html>
