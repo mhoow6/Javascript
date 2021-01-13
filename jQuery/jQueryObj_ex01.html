@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="jquery-1.11.0.min.js">
+    var t = document.getElementById("target");
+    
+    console.log(t); // <li id="target">html</li>
+
+    t.constructor; // HTMLLIElement()
+
+    var target = $(t);
+
+    target.constructor; // jQuery Object
+
+</script>
+<body>
+    <ul>
+        <li id="target">html</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ul>
+</body>
+</html>

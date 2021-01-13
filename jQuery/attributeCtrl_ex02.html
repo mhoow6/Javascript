@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<body>
+    <div id="t1">opentutorials</div>
+    <div id="t2">opentutorials</div>
+    <script>
+        $('#t1').prop('className', 'important');
+
+        // Element API를 통해 class 이름을 바꾸고 싶을 경우
+        // t2.className = 'current';
+        // 이런식으로 이름이 다른 번거로움을 jQuery는 내부적으로 보정
+        $('#t2').prop('class', 'current');  
+    </script>
+</body>
+
+</html>
