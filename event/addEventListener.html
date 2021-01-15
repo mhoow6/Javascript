@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="target" value="button" />
+    <script>
+        var t = document.getElementById('target');
+
+        // t.addEventListener가 없을 경우
+        // undefined == false
+        if (t.addEventListener) {
+            t.addEventListener('click', function (event) {
+                alert('Hello world, ' + event.target.value);
+            });
+
+        // ie8에선 attachEvent, srcElement사용
+        } else if (t.attachEvent) {
+            t.attachEvent('onclick', function (event) {
+                alert('Hello world, ' + event.srcElement.value);
+            })
+        }
+    </script>
+</body>
+
+</html>

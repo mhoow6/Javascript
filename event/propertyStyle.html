@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="target" value="button" />
+    <script>
+        var t = document.getElementById('target');
+
+        // event 객체를 인자로 받아옴
+        t.onclick = function (event) {
+            // target은 event를 호출한 객체를 의미
+            alert('Hello world, ' + event.target.value)
+        }
+    </script>
+
+</html>

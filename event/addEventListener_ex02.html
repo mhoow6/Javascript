@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="target" value="button" />
+    <script>
+        var t = document.getElementById('target');
+
+        // addEventListener의 장점
+        // property 방식의 경우 이런 식으로 코딩하면 이벤트가 덧씌워짐
+        t.addEventListener('click', function (event) {
+            alert(1);
+        });
+        t.addEventListener('click', function (event) {
+            alert(2);
+        });
+    </script>
+</body>
+
+</html>
