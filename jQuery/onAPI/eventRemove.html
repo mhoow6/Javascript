@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="target"></textarea>
+    <input id="remove" type="button" value="remove" />
+    <p id="status"></p>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        var handler = function (e) {
+            $('#status').text(e.type + Math.random());
+        };
+
+        // focus와 blur에 대한 이벤트 등록
+        $('#target').on('focus blur', handler);
+
+        // remove를 클릭했을때 focus와 blur 이벤트 삭제
+        // off()에 인자가 없을 경우 맨 나중에 추가했던 이벤트 삭제
+        $('#remove').on('click', function (e) {
+            $('#target').off('focus blur', handler);
+            console.log(32);
+        })
+    </script>
+</body>
+
+</html>

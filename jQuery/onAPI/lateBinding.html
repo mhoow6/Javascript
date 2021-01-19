@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        // 존재하는 엘리먼트에 대해서 이벤트 설치
+        $('body').on('click','a, li', function(event){
+        console.log(this.tagName);
+    })
+    </script>
+    <ul>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+    </ul>
+</body>
+</html>
