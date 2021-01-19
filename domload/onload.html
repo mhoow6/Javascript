@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // onload 이벤트의 경우 문서 내의 모든 리소스(이미지, 스크립트)
+        // 다운이 끝난 후에 실행 됨
+        window.addEventListener('load', function(){
+            var t = document.getElementById('target');
+            console.log(t);
+        })
+    </script>
+</head>
+<body>
+    <p id="target">Hello</p>
+</body>
+</html>
