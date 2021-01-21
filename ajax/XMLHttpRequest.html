@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>time : <span id="time"></span></p>
+    <input type="button" id="execute" value="execute" />
+    <script>
+        // Ajax: Asynchronous JavaScript and XML
+        // 자바스크립트를 이용해서 비동기적으로 서버와 브라우저가 데이터를 주고 받는 방식
+        document.querySelector('input').addEventListener('click', function (event) {
+            var xhr = new XMLHttpRequest();
+
+            // GET방식  주소 time.php
+            xhr.open('GET', './time.php');
+            xhr.onreadystatechange = function () {
+                // 통신 완료 && 통신 성공
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // responseText -> 서버에서 전송한 데이터
+                    document.querySelector('#time').innerHTML = xhr.responseText;
+                }
+            }
+            xhr.send();
+        }); 
+    </script>
+</body>
+
+</html>
