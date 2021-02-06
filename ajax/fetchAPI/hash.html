@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20vw;
+        position: relative;
+        left: 40vw;
+    }
+</style>
+<body>
+    <!-- hash = 북마크 -->
+    <a href="#three">Three</a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae mollitia eaque quae consectetur illo
+        repellat, iste cum! Aperiam, dicta iusto cumque iste ipsum odio adipisci nobis dolorum quis fuga. Perspiciatis
+        dicta qui at tempore voluptate corporis commodi necessitatibus perferendis nesciunt, veritatis cumque fugiat
+        enim esse laboriosam reprehenderit minus dolorum odit deserunt id consequatur? Voluptatum reprehenderit
+        accusamus veritatis pariatur suscipit iure magni fugit optio, hic velit, adipisci assumenda deserunt dolore
+        laborum omnis quis architecto nam. Autem dolorem neque optio corrupti porro quae veritatis molestiae iste
+        praesentium inventore aliquid et voluptate id eos aperiam, modi vel doloremque qui ipsam nostrum recusandae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugit nam incidunt omnis in. Quis accusamus et
+        architecto! Nisi, aliquam vel minima, architecto est dolorem repellendus hic quo accusamus quasi corporis
+        assumenda maxime id et ab deleniti inventore! Expedita voluptate esse eaque laudantium dolore hic voluptatibus
+        harum blanditiis, officia necessitatibus, distinctio eligendi illo cupiditate unde aperiam maxime consectetur.
+        Ipsa qui quia, earum modi saepe accusamus delectus error id incidunt perferendis facilis sit corporis natus,
+        voluptate repellendus! Nisi, delectus officia possimus ducimus tempora provident sint corrupti ullam
+        reprehenderit eius similique tempore cum ad cumque veritatis itaque nulla quibusdam quod. Nulla, est.</p>
+    <p id="three">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus similique totam quod minus alias et
+        obcaecati nisi iste aperiam cupiditate nobis, saepe nam perferendis fuga. Aspernatur officiis veritatis, sunt
+        deserunt voluptas cupiditate dolores earum nemo fugiat in commodi labore minima similique impedit dolor,
+        quibusdam eius unde nam, vel ad. Voluptatum hic illo eos aliquid molestias ipsum ea adipisci error accusantium
+        cum velit id quidem, dignissimos magnam animi. Ut consequuntur corrupti eveniet a nostrum explicabo ipsa! Ab
+        excepturi eum quo, autem, nesciunt nam dolor nulla aspernatur optio veritatis commodi molestias accusamus totam
+        soluta et. Non sint laborum ipsa sunt quos repellendus.</p>
+    <script>
+        if (location.hash) {
+            console.log(location.hash.substr(1));
+        } else {
+            // Fragment doesn't exist
+        }
+    </script>
+</body>
+
+</html>
