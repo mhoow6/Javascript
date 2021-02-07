@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findUserAndCallBack(id, cb) {
+            setTimeout(function () {
+                console.log("waited 0.1 sec.")
+                const user = {
+                    id: id,
+                    name: "User" + id,
+                    email: id + "@test.com",
+                }
+                // 콜백함수 호출
+                cb(user)
+            }, 100)
+        }
+
+        findUserAndCallBack(1, function (user) {
+            console.log("user:", user)
+        })
+    </script>
+</body>
+
+</html>
